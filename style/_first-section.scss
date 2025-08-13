@@ -1,0 +1,49 @@
+.first-section{
+  position: relative;
+  height: 115vh;
+
+  .bg{
+    object-position: center bottom;
+  }
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 60rem;
+
+    @include sm{
+      padding: 20rem;
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 90rem;
+  }
+
+  &__contacts{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__content{
+    min-height: 52.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 54rem;
+  }
+
+  &__title{
+    font-size: 96rem;
+
+    @include text-stroke;
+
+    @include sm{
+      font-size: 48rem;
+    }
+  }
+}

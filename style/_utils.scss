@@ -1,0 +1,27 @@
+$c-decor: #B96A2B;
+
+@mixin md {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin md-book{
+  @media (min-width: 640.1px) and (min-height: 80vw){
+    @content
+  }
+}
+
+@mixin sm{
+  @media (max-width: 640px) {
+    @content
+  }
+}
+
+@mixin text-stroke($a: 0.78){
+  text-stroke-width: 1px;
+  text-stroke-color: rgba(255, 255, 255, $a);
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, $a);
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+@import "utils";
+@import "first-section";
+
+html{
+  font-size: calc(100vw / 1920);
+
+  @include sm{
+    font-size: calc(100vw / 393);
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Viaoda Libre", serif;
+  color: rgba(255, 255, 255, 0.73);
+  text-align: center;
+  text-shadow: 0 4px 4px #000;
+  font-size: 24rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 97.892%; /* 23.494px */
+  letter-spacing: 0.11em;
+}
+
+body{
+  background: #1e1e1e;
+
+  @include sm{
+    background-image: url("/images/bg-mobile.png");
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+.bg{
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.no-sm{
+  @include sm{
+    display: none !important;
+  }
+}
+
+.contacts{
+  position: fixed;
+  z-index: 4;
+  right: 60rem;
+  top: 60rem;
+
+  @include text-stroke(0.7);
+
+  @include sm{
+    top: 20rem;
+    right: 20rem;
+  }
+}
+
+a{
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.link{
+  display: block;
+  padding-bottom: 13rem;
+  position: relative;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: $c-decor;
+    bottom: -3px;
+    left: 0;
+    transition: 0.4s;
+  }
+
+  &:hover{
+    @include text-stroke;
+
+    &::before{
+      width: 100%;
+    }
+  }
+}
+
+.btn{
+  display: block;
+  border-radius: 9px;
+  border-bottom: 6rem solid #B96A2B;
+  padding: 17rem 42rem;
+  font-size: 36rem;
+
+  @include text-stroke(0.7);
+
+  &:hover{
+    background: rgba(246, 161, 101, 0.40);
+    box-shadow: 0 4px 12.2px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.2000000476837158px);
+  }
+}
