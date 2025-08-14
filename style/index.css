@@ -2,6 +2,14 @@
 .first-section {
   position: relative;
   height: 115vh;
+  margin-bottom: -21vh;
+  z-index: 2;
+}
+@media (max-width: 640px) {
+  .first-section {
+    height: 100vh;
+    margin-bottom: 0;
+  }
 }
 .first-section .bg {
   object-position: center bottom;
@@ -34,6 +42,12 @@
   align-items: center;
   gap: 54rem;
 }
+@media (max-width: 640px) {
+  .first-section__content {
+    min-height: 56vh;
+    gap: 100rem;
+  }
+}
 .first-section__title {
   font-size: 96rem;
   text-stroke-width: 1px;
@@ -44,6 +58,145 @@
 @media (max-width: 640px) {
   .first-section__title {
     font-size: 48rem;
+  }
+}
+
+.second-section {
+  position: relative;
+  min-height: 110vh;
+  padding: 22vh 100rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 640px) {
+  .second-section {
+    padding: 0;
+  }
+}
+.second-section__content {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 180rem;
+}
+@media (max-width: 640px) {
+  .second-section__content {
+    flex-direction: column;
+    padding-inline: 10rem;
+  }
+}
+.second-section__left {
+  max-width: 600rem;
+}
+.second-section__left * {
+  font-size: 32rem;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .second-section__left * {
+    font-size: 20rem;
+  }
+}
+.second-section__left .btn {
+  width: fit-content;
+  margin-inline: auto;
+}
+.second-section__title {
+  margin-bottom: 30rem;
+  color: rgba(255, 181, 123, 0.79);
+  text-stroke-width: 1px;
+  text-stroke-color: rgba(255, 181, 123, 0.69);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 181, 123, 0.69);
+}
+.second-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 60rem;
+  padding-left: 60rem;
+  margin-top: min(100rem, 6vh);
+}
+@media (max-width: 640px) {
+  .second-section__list {
+    padding-inline: 15rem;
+    margin-bottom: 100rem;
+  }
+}
+.second-section__list-item {
+  list-style: none;
+  display: flex;
+  gap: 38rem;
+  align-items: baseline;
+}
+.second-section__list-item::before {
+  content: "";
+  height: 3px;
+  width: 50rem;
+  background: #B96A2B;
+  position: relative;
+  top: -0.2em;
+}
+@media (max-width: 640px) {
+  .second-section__list-item::before {
+    display: none;
+  }
+}
+.second-section__list-item * {
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .second-section__list-item * {
+    text-align: center;
+    font-size: 24rem;
+  }
+}
+.second-section__right {
+  max-width: 400rem;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60rem;
+}
+@media (max-width: 640px) {
+  .second-section__right {
+    gap: 100rem;
+  }
+}
+.second-section__right-text * {
+  line-height: 163%;
+}
+@media (max-width: 640px) {
+  .second-section__right-text * {
+    text-stroke-width: 1px;
+    text-stroke-color: rgba(255, 255, 255, 0.78);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.78);
+  }
+}
+.second-section__letter-spacing {
+  letter-spacing: 0.22em;
+}
+@media (max-width: 640px) {
+  .second-section__letter-spacing {
+    letter-spacing: 0.11em;
+  }
+}
+.second-section__footer {
+  border-top: 3rem solid #B96A2B;
+  padding: 20rem 100rem;
+  display: flex;
+  gap: 360rem;
+}
+@media (max-width: 640px) {
+  .second-section__footer {
+    padding: 20rem 10rem;
+    justify-content: center;
+    margin-top: 100rem;
+    text-stroke-width: 1px;
+    text-stroke-color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.7);
   }
 }
 
@@ -94,6 +247,15 @@ body {
 @media (max-width: 640px) {
   .no-sm {
     display: none !important;
+  }
+}
+
+.no-big {
+  display: none !important;
+}
+@media (max-width: 640px) {
+  .no-big {
+    display: block !important;
   }
 }
 
@@ -157,6 +319,11 @@ a {
   text-stroke-color: rgba(255, 255, 255, 0.7);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 640px) {
+  .btn {
+    font-size: 24rem;
+  }
 }
 .btn:hover {
   background: rgba(246, 161, 101, 0.4);

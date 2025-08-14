@@ -1,0 +1,135 @@
+.second-section{
+  position: relative;
+  min-height: 110vh;
+  padding: 22vh 100rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include sm{
+    padding: 0;
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 180rem;
+
+    @include sm{
+      flex-direction: column;
+      padding-inline: 10rem;
+    }
+  }
+
+  &__left{
+    max-width: 600rem;
+
+    *{
+      font-size: 32rem;
+      color: #fff;
+
+      @include sm{
+        font-size: 20rem;
+      }
+    }
+
+    .btn{
+      width: fit-content;
+      margin-inline: auto;
+    }
+  }
+
+  &__title{
+    margin-bottom: 30rem;
+    color: rgba(255, 181, 123, 0.79);
+
+    @include text-stroke(255, 181, 123, 0.69)
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 60rem;
+    padding-left: 60rem;
+    margin-top: min(100rem, 6vh);
+
+    @include sm{
+      padding-inline: 15rem;
+      margin-bottom: 100rem;
+    }
+
+    &-item{
+      list-style: none;
+      display: flex;
+      gap: 38rem;
+      align-items: baseline;
+
+      &::before{
+        content: '';
+        height: 3px;
+        width: 50rem;
+        background: $c-decor;
+        position: relative;
+        top: -0.2em;
+
+        @include sm{
+          display: none;
+        }
+      }
+
+      *{
+        text-align: left;
+
+        @include sm{
+          text-align: center;
+          font-size: 24rem;
+        }
+      }
+    }
+  }
+
+  &__right{
+    max-width: 400rem;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60rem;
+
+    @include sm{
+      gap: 100rem;
+    }
+
+    &-text *{
+      line-height: 163%;
+
+      @include sm{
+        @include text-stroke
+      }
+    }
+  }
+
+  &__letter-spacing{
+    letter-spacing: 0.22em;
+
+    @include sm{
+      letter-spacing: 0.11em;
+    }
+  }
+
+  &__footer{
+    border-top: 3rem solid #B96A2B;
+    padding: 20rem 100rem;
+    display: flex;
+    gap: 360rem;
+
+    @include sm{
+      padding: 20rem 10rem;
+      justify-content: center;
+      margin-top: 100rem;
+
+      @include text-stroke($a: 0.7);
+
+    }
+  }
+}

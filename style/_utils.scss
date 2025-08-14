@@ -18,10 +18,11 @@ $c-decor: #B96A2B;
   }
 }
 
-@mixin text-stroke($a: 0.78){
+@mixin text-stroke($r: 255, $g: 255, $b: 255,$a: 0.78){
   text-stroke-width: 1px;
-  text-stroke-color: rgba(255, 255, 255, $a);
+  text-stroke-color: rgba($r, $g, $b, $a);
+
 
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, $a);
+  -webkit-text-stroke-color: rgba($r, $g, $b, $a);
 }

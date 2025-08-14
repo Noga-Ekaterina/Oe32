@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 @import "utils";
 @import "first-section";
+@import "second-section";
 
 html{
   font-size: calc(100vw / 1920);
@@ -50,13 +51,21 @@ body{
   }
 }
 
+.no-big{
+  display: none !important;
+
+  @include sm{
+    display: block !important;
+  }
+}
+
 .contacts{
   position: fixed;
   z-index: 4;
   right: 60rem;
   top: 60rem;
 
-  @include text-stroke(0.7);
+  @include text-stroke($a: 0.7);
 
   @include sm{
     top: 20rem;
@@ -104,7 +113,11 @@ a{
   padding: 17rem 42rem;
   font-size: 36rem;
 
-  @include text-stroke(0.7);
+  @include text-stroke($a: 0.7);
+
+  @include sm{
+    font-size: 24rem;
+  }
 
   &:hover{
     background: rgba(246, 161, 101, 0.40);

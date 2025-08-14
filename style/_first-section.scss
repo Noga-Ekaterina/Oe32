@@ -1,6 +1,13 @@
 .first-section{
   position: relative;
   height: 115vh;
+  margin-bottom: -21vh;
+  z-index: 2;
+
+  @include sm{
+    height: 100vh;
+    margin-bottom: 0;
+  }
 
   .bg{
     object-position: center bottom;
@@ -35,6 +42,11 @@
     justify-content: flex-end;
     align-items: center;
     gap: 54rem;
+
+    @include sm{
+      min-height: 56vh;
+      gap: 100rem;
+    }
   }
 
   &__title{
